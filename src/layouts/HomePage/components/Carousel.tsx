@@ -1,8 +1,12 @@
 import { ReturnBook } from "./ReturnBook";
-import { useEffect, useState} from "react"
+import { useEffect, useState} from "react";
+import BookModel from "../../../models/BookModels";
 
 export const Carousel = () => {
-    return (
+
+    const [books, setBooks] = useState<BookModel[]>([]);
+
+    
         <div className="container mt-5" style={{ height: 550 }}>
             <div className="homepage-carousel-title">
                 <h3>Find your next "I stayed up too late reading" book.</h3>
